@@ -47,4 +47,4 @@ Since this is a static website, no additional setup is required. Simply open the
  https://briankush.github.io/Web-Development-group-assignment/
 
 
-© 2024 John Watson. All rights reserved.
+© 2025 John Watson. All rights reserved.
