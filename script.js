@@ -23,3 +23,34 @@ backToTopBtn.addEventListener('click', () => {
         behavior: 'smooth'
     });
 });
+
+// Dark Mode Toggle
+const darkModeToggle = document.getElementById('darkModeToggle');
+const body = document.body;
+
+// Check for saved user preference, if any
+const currentTheme = localStorage.getItem('theme');
+if (currentTheme === 'dark-mode') {
+    body.classList.add('dark-mode');
+    darkModeToggle.checked = true;
+}
+
+// Listen for toggle changes
+darkModeToggle.addEventListener('change', () => {
+    if (darkModeToggle.checked) {
+        body.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark-mode');
+    } else {
+        body.classList.remove('dark-mode');
+        localStorage.setItem('theme', 'light-mode');
+    }
+});
+
+// Close mobile menu when clicking on a link
+document.querySelectorAll('nav ul li a').forEach(link => {
+    link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+            nav.style.display = 'none';
+        }
+    });
+});
